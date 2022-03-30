@@ -39,7 +39,7 @@ termination or reduction of the debt position.
 
 ## Control Flow
 
-Typical Control flow of a Margin Account would persist as follows:
+The typical Control flow of a Margin Account would persist as follows:
 
 1. Borrower pledges margin (collateral) to borrow assets.
 2. Lending contract initiates credit transaction, sending assets to the Margin 

@@ -4,28 +4,28 @@ sidebar_position: 1
 
 # Overview
 
-The Sentiment protocol is a credit protocol that provides generalized margin 
-borrowing across DeFi. At its core it allows borrowers to have access to 
-increased borrowing capacity and enables borrowers to deploy borrowed assets 
-in dynamic ways in a plethora of DeFi protocols. Simply put Sentiment 
-facilitates cross-margin that can be deployed across DeFi. 
+The Sentiment protocol is a credit protocol that provides generalized margin
+borrowing across DeFi. At its core, it allows borrowers to have access to
+increased borrowing capacity and enables borrowers to deploy borrowed assets
+in dynamic ways in a plethora of DeFi protocols. Simply put Sentiment
+facilitates cross-margin that can be deployed across DeFi.
 
-The two main actors in Sentiment are Lenders and Borrowers, value proposition 
+The two main actors in Sentiment are Lenders and Borrowers, value proposition
 of both can be understood below.
 
 ## Sentiment for Lenders
 
-For simplicity and ease of use, Sentiment's Ltoken contracts maintain a 
+For simplicity and ease of use, Sentiment's Ltoken contracts maintain a
 simple mechanism: Lenders simply deposit any asset they wish to gain yield on,
-and receive an interest bearing token corresponding with their underlying asset.
+and receive an interest-bearing token corresponding with their underlying asset.
 
 ## Sentiment for Borrowers
 
 ### Accounts
-Margin Accounts allow borrowers to margin their collateral and leverage greater 
-than 5x, and deploy borrowed assets across DeFi. Margin Accounts are individual 
-smart contracts that resemble modified ds-proxys. In order for a borrower to 
-interact with the rest of the protocol they must deposit collateral into a 
+Margin Accounts allow borrowers to margin their collateral and leverage greater
+than 5x, and deploy borrowed assets across DeFi. Margin Accounts are individual
+smart contracts that resemble modified ds-proxys. For a borrower to
+interact with the rest of the protocol, they must deposit collateral into a
 Margin Account. The normal borrowing flow will resemble the following:
 1. Alice, supplies 10 ETH as collateral (effectively opening a Margin Account).
 2. Alice selects the type of Asset(s) they would like to borrow and the amount.
