@@ -23,4 +23,4 @@ unique ways protocols can provide their users with increased exposure to their
 respective primitives. The key proponent of Sentiment is the Margin Account, a
 unique primitive that allows users to have access to greater leverage (>5x)
 than incumbent money-markets, and allows borrowed funds to be deployed across
-many DeFi protocols. 
+many DeFi protocols.
