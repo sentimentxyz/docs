@@ -6,4 +6,4 @@ sidebar_position: 1
 
 #### High-level Architecture Diagram
 
-![Arch Diagram](./SentimentArch.png)
+![Arch Diagram](../../static/archDiagram.png)
