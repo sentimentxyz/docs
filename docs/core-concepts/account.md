@@ -4,62 +4,34 @@ sidebar_position: 2
 
 # Account
 
-Sentiment employs the method of hypothecation, essentially allowing borrowers
-to borrow capital >5x the value of their collateral in a way that mitigates the
-risk of default for lenders. Accounts are dynamic and distributed asset
-reserves that hold a borrower’s margin deposit and loaned assets that are
-transferred when a debt position is created. Each Account represents a
-single debt position. The core of how Sentiment's Accounts operate are
-on the following premise:
+Sentiment uses the Account primitive to implement onchain hypothecation of 
+assets, essentially allowing borrowers to create leveraged debt positions 
+against their collateral while mitigating counterparty for the lenders. 
+Accounts are dynamic and distributed asset reserves that hold a borrower’s 
+collateral and loaned assets. Each Account can be viewed as a composite
+cross-margin debt position. This section expands on the key characteristics of
+an Account.
 
 ## Delegated Ownership
 
-The borrower never has custody of the loaned assets, i.e: loaned assets cannot
-be transferred out of the margin vault. This delegated ownership model allows
-the borrower to have control over how the funds are deployed without having
-custody, thus passing the first right of ownership over these assets to the
-protocol.
+Since the account is a proxy contract which is separate from the borrower's EOA,
+the borrower never has custody of the loaned assets i.e. neither the deposited 
+collateral nor the borrowed assets can be transferred out of the account. This 
+delegated ownership model allows the borrower to have complete control over how 
+the assets are deployed without actually having custody, which allows the 
+protocol to maintain first right of ownership throughout the tenure of the 
+position. The first right of ownership is a crucial to allow the protocol to 
+keep the position risk in check at all times and facilitate liquidations, if 
+needed. The only situation where a borrower would withdraw any assets from the 
+vault is to withdraw profits, reduce the position or close out the entire 
+position.
 
-## Controlled Interaction
+## Controlled Interactions
 
-The protocol restricts the actions a borrower can perform with the loaned
-assets to mitigate credit risk and maintain solvency. The allow-list for
-these set of actions is configurable and can be modified through governance
-mechanisms over time. The protocol can control what contracts (and which tokens)
-the borrowed assets are allowed to interact with.
-
-## Account Ownership
-
-As mentioned before the Account will hold both the loaned assets and
-the borrowers margin collateral. During the term of a loan, all assets within
-the Account are controlled by the protocol and at no point will the
-borrower be able to actually obtain custody of credited funds. The only
-situation where a borrower would withdraw any assets from the vault is during
-termination or reduction of the debt position.
-
-## Control Flow
-
-The typical Control flow of an Account would persist as follows:
-
-1. Borrower pledges margin (collateral) to borrow assets.
-2. Lending contract initiates credit transaction, sending assets to the
-Account.
-3. Borrower deploys the loaned assets in a controlled manner with the help of
-the Controller.
-4. The Risk Engine ensures health of the borrow account during the term of the
-debt.
-
-## Account Functions
-
-All Accounts have the same actionable events such as (but not limited
-to) purchasing assets, providing liquidity etc. The Sentiment Core team aims
-to provide an augmentative interaction suite that scales as more opportunities
+All interactions delegated by the borrower pass through the controller. The 
+controller analyzes the calldata for the interaction to determine the type of 
+operation and it's affect on the account value. This allows the protocol to 
+restrict the actions a borrower can perform with the borrowed assets to 
+mitigate credit risk and maintain solvency in the system. Sentiment aims to 
+provide an interaction suite that continues to scale as more opportunities 
 become available in DeFi.
-
-Once a user opens a margined position, they will be able to delegate
-instructions to the Controller. These actions will be verified
-against the allowed list of possible interactions, if permissible, the action
-will be deployed on the loaned assets. This implementation gives the borrower
-the ability to determine the use of the proceeds, benefits from the increase
-in value or profit of the funds while also protecting the lender from any
-default risk.

@@ -4,54 +4,33 @@ sidebar_position: 1
 
 # Overview
 
-The Sentiment protocol is a credit protocol that provides generalized margin
-borrowing across DeFi. At its core, it allows borrowers to have access to
-increased borrowing capacity and enables borrowers to deploy borrowed assets
-in dynamic ways in a plethora of DeFi protocols. Simply put Sentiment
-facilitates cross-margin that can be deployed across DeFi.
-
-The two main actors in Sentiment are Lenders and Borrowers, value proposition
-of both can be understood below.
+Sentiment is a permissionless undercollateralised onchain credit protocol that 
+allows users to lend and borrow assets with increased capital efficiency and 
+deploy them across DeFi. The two key user groups interacting with the protocol 
+are are Lenders and Borrowers. We outline the value proposition for both of 
+these groups below.
 
 ## Sentiment for Lenders
 
-For simplicity and ease of use, Sentiment's Ltoken contracts maintain a
-simple mechanism: Lenders simply deposit any asset they wish to gain yield on,
-and receive an interest-bearing token corresponding with their underlying asset.
+Lenders supply liquidity to the protocol which is then lent out to borrowers as
+undercollaterised debt. The value proposition for Lenders is straightforward - 
+they supply assets to the protocol with the expectation to earn a yield higher 
+than that in incumbent credit markets.
+
+Lenders interact with the protocol by supplying assets and receiving 
+corresponding interest-bearing LTokens in return. These LTokens act as a receipt
+of deposit and can be burned at a later point in time to redeem the initial 
+principal and accrued interest on the same.
 
 ## Sentiment for Borrowers
 
-### Accounts
-Accounts allow borrowers to margin their collateral and leverage greater
-than 5x, and deploy borrowed assets across DeFi. Accounts are individual
-smart contracts that resemble modified ds-proxys. For a borrower to
-interact with the rest of the protocol, they must deposit collateral into an
-Account. The normal borrowing flow will resemble the following:
-1. Alice, supplies 10 ETH as collateral (effectively opening a margin Account).
-2. Alice selects the type of Asset(s) they would like to borrow and the amount.
-    * To borrow, Alice's Account will take a loan from the Lending Pool
-3. Once Alice has the asset(s) in her Account, Alice may delegate the
-interactions she would like to do with supported DeFi protocols. Let us assume
-Alice wants to 10x Long ETH.
-4. Alice may now interact with any whitelisted AMM, and use the asset(s) she
-borrowed to exchange and purchase more ETH.
-5. Once Alice is satisfied with her position, she re-purchases the assets she
-borrowed, and repays her loan to the Lending Pool + any interest incurred. If
-the trade went in Alice's favor she is able to withdraw her collateral and
-profits.
+Sentiment allows borrowers to create leveraged debt positions against their 
+assets that can be used to interact with other applications across the ecosystem.
+The value proposition for borrowers is access to undercollterised lines of 
+credit that help leverage their collateral in a capital-efficient manner.
 
-### Interaction Controllers
-
-To allow for dynamic capital allocation, Accounts are equipped with the
-ability to delegate calls to Interaction Controllers. Interaction Controllers
-are smart-contracts that allow Accounts to compute complex logic, such
-as actions that borrowers want to execute with loaned assets including;
-swapping on DEX, providing liquidity on DEX, earning yield on primitives such
-as Yearn, Deposit into Money-Markets and much more.
-
-### Risk Engine
-
-The Risk Engine contract is 1/2 of the risk engine of the protocol. It
-ensures all Accounts are adequately collateralized. It permissions
-liquidations for Accounts that are at risk of being in default, and
-stores the risk factor and health factor of each Account.
+Borrowers interact with the protocol using an Account. Every Sentiment account 
+is a proxy contract that holds the borrower's assets while allowing them 
+delegated control to deploy these assets anywhere. The borrower has complete 
+control on how the assets in an account are deployed subject only to 
+Sentiment's risk measures that help keep the system solvent.
