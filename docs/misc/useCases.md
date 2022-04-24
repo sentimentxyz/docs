@@ -1,10 +1,10 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 # Use Cases
 
-- Short a Major (ETH,BTC, etc.) against a stablecoin, and get yield on the 
+- Short a Major (ETH, BTC, etc.) against a stablecoin, and get yield on the 
     stablecoin via Curve
     - This strategy expounds on the premise of a carry trade in that, you are 
     effectively borrowing (going short) an asset with a negative expected rate 
@@ -37,4 +37,4 @@ sidebar_position: 2
     put USDC as collateral > Borrow the ETH/WBTC LP tokens > Unwrap the 
     liquidity (The trade assumption is that there will be volatility and the 
     spread between ETH-BTC will increase during the trade) > If the spread 
-    widens, the user can profit the difference from $t_0$ to
+    widens, the user can from profit the difference.
