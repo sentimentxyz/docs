@@ -19,7 +19,7 @@ Accounts are responsible for the hypothecation of assets on chain. Essentially
 Accounts hold an amalgamation of all the users positions, including their
 collateral.
 
-### Storage
+### State Variables
 - `activationBlock` lock number for when the account is activated. Note: This is important since accounts are reusable. Each time a contract is initialized to a
 new borrower, it will be timestamped with the corresponding block.
 - `accountManager` current implementation of the [account manager](protocol/core/accountManager.md)
@@ -51,7 +51,7 @@ new borrower, it will be timestamped with the corresponding block.
 - `function getBorrows()` returns tokens that have been borrowed within the
                           accounts
 
-                          
+
 #### Utility Functions
 
 ```
