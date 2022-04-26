@@ -18,7 +18,7 @@ The `AccountManager.sol` contract will be responsible for 3 main things:
 
 - `IRiskEngine public riskEngine` [Risk Engine](protocol/core/riskEngine.md) interface state variable. Stores the Risk engine contract
 - `IControllerFacade public controller`  [Controller](protocol/controllers/controller.md) interface state variable.
-- `IAccountFactory public accountFactory`  [Account Factory](protocol/controllers/accountFactory.md)
+- `IAccountFactory public accountFactory`  [Account Factory](protocol/core/accountFactory.md)
 - `inactiveAccounts` an array of previously minted accounts that are eligible to be initialized for borrowers
 - `isCollateralAllowed` a mapping of address to a boolean, affirming if a token address is able to be used as collateral
 
