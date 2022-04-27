@@ -45,12 +45,12 @@ function isAccountHealthy(address account) external view returns (bool) { }
                 balanceToBorrowThreshold
   return isAccountHealthy Returns whether an account is healthy or not
 
-```js
+```solidity
 function getBalance(address account) external view returns (uint) { }
 ```
 - Returns total account Balance
 
-```js
+```solidity
 function getBorrows(address account) external view returns (uint) { }
 ```
 - Returns total account Borrows

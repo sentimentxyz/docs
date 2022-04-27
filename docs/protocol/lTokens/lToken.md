@@ -30,7 +30,7 @@ respective LToken contracts to isolate risk. Each LToken is implemented using th
 These actions are specified by accounts but conducted by the Account Manager
 contract
 
-```solidity
+```sol
 function lendTo(address account, uint amt)
     external
     whenNotPaused
@@ -40,7 +40,7 @@ function lendTo(address account, uint amt)
 ```
 - Lends a specified amount of underlying asset to an account, `isFirstBorrow`     returns if the account is borrowing the asset for the first time. Everytime function is called the state of the Ltoken pool gets updated
 
-```solidity
+```sol
 function collectFrom(address account, uint amt)
   external
   accountManagerOnly
@@ -49,32 +49,32 @@ function collectFrom(address account, uint amt)
 ```
 - Collects a specified amount of underlying asset from an account. `isNotInDebt` returns if the account has pending borrows or not
 
-```soldiity
+```sol
    function getBorrowBalance(address account) external view returns (uint) { }
 ```
 - fetches the debt balance of a given account, returns the amount of the underlying tokens borrowed
 
 **Public Functions**
-```solidity
+```sol
     function totalAssets() public view override returns (uint) { }
 ```
 - Returns total amount of underlying assets
             totalAssets = underlying balance + totalBorrows - totalReservers + delta
             delta = totalBorrows * RateFactor * (1e18 - reserveFactor)
 
-```solidity
+```sol
 function updateState() public { }
 ```
 - updates the state of the Ltoken contract, callable by anyone, to ensure data freshness
 
 **Helper Functions**
-```js
+```sol
 function _getRateFactor() internal view returns (uint) { }
 ```
 - Rate Factor = Block Delta * Interest Rate Per Block
     Block Delta = Number of blocks since last update
 **Admin Functions**
-```js
+```sol
 function redeemReserves(address to, uint amt) external adminOnly { }
 ```
 - Transfers reserves from the LP to the specified address, this will be used sparsely, when assets accrued via the reserve factor are necessary for utilization. This could be used for a liquidity backstop or fee disbursement.  

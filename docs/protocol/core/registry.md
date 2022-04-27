@@ -31,35 +31,35 @@ The registry contract is global storage for the Sentiment ecosystem. Storage inc
 
 **Modifying Storage**
 
-```
+```solidity
 function setAddress(string calldata id, address _address) external adminOnly { }
 
 ```
 
 - sets the contract address for a given `id`. It helps accounts maintain secure interactions with listed and verified addresses. This is only configurable via admin which will eventually be governed in a decentralized manner.
 
-```
+```sol
  function setLToken(address underlying, address lToken) external adminOnly { }
 
 ```
 
 - Sets LToken address for a specified token. This helps keep storage of lTokens and underlying tokens consistent, also adds composability with external contracts that use lTokens.
 
-```
+```sol
 function addAccount(address account, address owner) external accountManagerOnly { }
 
 ```
 
 - has two main priorities, it updates the `accounts` array every time a new account is minted. It also updates the `ownerFor` mapping, which maps any newly minted accounts to the owner.
 
-```
+```sol
 function updateAccount(address account, address owner) external accountManagerOnly { }
 
 ```
 
 - primarily used when idle accounts are reassigned to new owners, or when users close their accounts. This function updates the `onwerFor` mapping to the accounts most current owner.
 
-```
+```sol
 function closeAccount(address account) external accountManagerOnly { }
 
 ```
@@ -68,28 +68,28 @@ function closeAccount(address account) external accountManagerOnly { }
 
 **Fetching Data**
 
-```
+```sol
 function getAllKeys() external view returns(string[] memory) { }
 
 ```
 
 - Returns all contract names in registry
 
-```
+```sol
 function getAllAccounts() external view returns (address[] memory) { }
 
 ```
 
 - Returns all accounts in registry
 
-```
+```sol
 function getAllLTokens() external view returns (address[] memory) { }
 
 ```
 
 - Returns all active LTokens in registry
 
-```
+```sol
 function accountsOwnedBy(address user) external view returns (address[] memory userAccounts) { }
 
 ```

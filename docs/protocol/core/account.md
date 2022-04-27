@@ -37,7 +37,7 @@ new borrower, it will be timestamped with the corresponding block.
 
 ### Initialization
 
-```
+```sol
   function init(address _accountManager) external { }
 
 ```
@@ -47,7 +47,7 @@ manager.
 - Can only be called as long as the address of the accountManager is
 0x0.
 
-```
+```sol
     function activate() external accountManagerOnly { }
 
 ```
@@ -63,7 +63,7 @@ accounts
 
 ### Utility Functions
 
-```
+```sol
 function exec(address target, uint amt, bytes calldata data)
     external
     payable
@@ -77,7 +77,7 @@ function exec(address target, uint amt, bytes calldata data)
 target Address of contract to transact with. This gives modularity to
 each Account within the Sentiment ecosystem. This function allows arbitrary execution of functions that allow users to interact with other protocols such as AMMs and structured products in a modular way. This function is delegated through the [account manager](protocol/core/accountManager.md) and referenced with the [controllers](protocol/controllers/controller.md) to ensure functions are permissible.
 
-```
+```sol
  function sweepTo(address toAddress) external accountManagerOnly { }
 
 ```
@@ -88,28 +88,28 @@ provides flexibility to be used for global settlement of Accounts
 
 ### Asset Management
 
-```
+```sol
 function addAsset(address token) external accountManagerOnly { }
 
 ```
 
 - When an external transaction such as a deposit or swap interaction occurs, that includes new assets (`token`) entering the `account` this function is called, appending the new asset to the `asset` array
 
-```
+```sol
 function addBorrow(address token) external accountManagerOnly { }
 
 ```
 
 - Similar to the `addAsset()` function, add borrows appends a `token` to the `borrows` array. The main caveat is, these tokens are considered debt tokens, and are accounted against the value of the overall Account
 
-```
+```sol
 function removeAsset(address token) external accountManagerOnly { }
 
 ```
 
 - The inverse of `addAsset()` this function will be called when an asset is removed from the account.
 
-```
+```sol
 function removeBorrow(address token) external accountManagerOnly { }
 
 ```

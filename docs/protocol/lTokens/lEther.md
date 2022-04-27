@@ -12,11 +12,11 @@ ERC4626-compliant and WETH9 is the underlying asset for LEther.
 >
 
 ## Functions
-``` js
+``` sol
 function depositEth() external payable { }
 ```
 - Wraps Eth sent by the user and deposits into the LP transfers shares to the user denoting the amount of Eth deposited
-``` js
+``` sol
 function redeemEth(uint shares) external { }
 ```
 - Unwraps Eth and transfers it to the caller amount of Eth transferred will be the total underlying assets that are represented by the shares

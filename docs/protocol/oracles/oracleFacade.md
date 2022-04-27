@@ -14,13 +14,13 @@ of oracles.
 - `mapping(address => IOracle) public oracle` maps a token address to its respective oracle
 
 ### Functions
-```js
+```sol
 function getPrice(address token) external view returns (uint) { }
 ```
 - Assuming the response has 18 decimals, returns the price of a token
 
 **Admin Functions**
-``` js
+``` sol
 function setOracle(address token, IOracle _oracle) external adminOnly { }
 ```
 
