@@ -28,7 +28,7 @@ primitive-based solution to enable permissionless undercollaterised onchain
 credit. Sentiment mitigates the challenge of widespread counterparty risk by
 implementing onchain hypothecation. This helps increases capital 
 efficiency for borrowers and creates unique ways for other DeFi products to 
-access leverage by integrating with Senntiment. A Sentiment "Account", 
+access leverage by integrating with Sentiment. A Sentiment "Account", 
 the protocol's key primitive, allows users to gain access to greater leverage 
 than incumbent money-markets while allowing the borrowed assets to be deployed
 across the DeFi ecosystem.
