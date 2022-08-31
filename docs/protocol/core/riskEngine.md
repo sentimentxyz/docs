@@ -22,7 +22,7 @@ are performed on an account. It is a utility contract used by the protocol to an
     >For an example an account that has collateral valued at $100, total debt is $400, and current account value is $500 ($100 + $400), the Health factor would be 500/400 or 1.25, which is considered healthy
 
 
-### Functions (convert equations to KaTeX)
+### Functions
 ``` solidity
 function isWithdrawAllowed( address account, address token, uint amt )
     external
@@ -32,18 +32,22 @@ function isWithdrawAllowed( address account, address token, uint amt )
 ```
 - Utility function to determine if an account can withdraw a specified amount of
 a token
-            isWithdrawAllowed = (currentAccountBalance - withdrawValue) /
-                currentAccountBorrows > balanceToBorrowThreshold
-returns isWithdrawAllowed Returns whether a withdraw is allowed or not
+$$ 
+isWithdrawAllowed = \frac{(currentAccountBalance - withdrawValue)}{
+                currentAccountBorrows} > balanceToBorrowThreshold 
+$$
+Returns a boolean indicating whether a withdraw is allowed or not
 
 
 ``` solidity
 function isAccountHealthy(address account) external view returns (bool) { }
 ```
 - Utility function to determine if an account is healthy or not
-            isAccountHealthy = currentAccountBalance / currentAccountBorrows >
+$$
+isAccountHealthy = \frac{currentAccountBalance}{currentAccountBorrows} >
                 balanceToBorrowThreshold
-  return isAccountHealthy Returns whether an account is healthy or not
+$$
+Returns a boolean indicating whether an account is healthy or not
 
 ```solidity
 function getBalance(address account) external view returns (uint) { }
