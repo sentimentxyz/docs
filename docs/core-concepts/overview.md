@@ -26,7 +26,7 @@ principal and accrued interest on the same.
 
 Sentiment allows borrowers to create leveraged debt positions against their 
 assets that can be used to interact with other applications across the ecosystem.
-The value proposition for borrowers is access to undercollterised lines of 
+The value proposition for borrowers is access to undercollateralized lines of 
 credit that help leverage their collateral in a capital-efficient manner.
 
 Borrowers interact with the protocol using an Account. Every Sentiment account 
