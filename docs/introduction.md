@@ -6,7 +6,7 @@ sidebar_position: 1
 # Introduction
 
 Traditional credit markets form some of the most robust components of the 
-modernfinancial system. These markets are structurally reinforced by 
+modern financial system. These markets are structurally reinforced by 
 sophisticated derivative and insurance mechanisms built on top of massive tech 
 infrastructure. Even at the individual level, widespread data collection fed 
 into reputation systems help mitigate credit risk by disincentivizing borrowers
