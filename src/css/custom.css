@@ -1,0 +1,25 @@
+.navbar--fixed-top {
+  padding: 0px 16px !important;
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+  height: 80px !important;
+}
+.navbar__logo img {
+  height: 45px;
+  object-fit: contain;
+}
+
+.navbar__logo {
+  height: 45px !important;
+}
+
+[data-theme="dark"] .navbar--fixed-top {
+  background: linear-gradient(30deg, #00092f, #02166f);
+}
+[data-theme="dark"] aside {
+  background: linear-gradient(120deg, #00092f, #02166f);
+}
+
+[data-theme="dark"]
+  .docMainContainer_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocPage-styles-module {
+  background: radial-gradient(#02166f, #00092f) !important;
+}
