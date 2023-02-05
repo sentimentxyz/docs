@@ -6,6 +6,7 @@
   --ifm-color-primary-light: #02187a;
   --ifm-color-primary-lighter: #021980;
   --ifm-color-primary-lightest: #031d90;
+  --ifm-code-font-size: 95%;
 }
 [data-theme="dark"] {
   --ifm-color-primary: #002fff;
