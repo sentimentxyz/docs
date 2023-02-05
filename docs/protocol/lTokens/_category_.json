@@ -1,4 +1,7 @@
 {
-    "label": "LTokens",
-    "position": 5
+  "label": "LTokens",
+  "position": 5,
+  "link": {
+    "type": "generated-index"
+  }
 }
