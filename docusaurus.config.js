@@ -57,7 +57,8 @@ const config = {
     navbar: {
       logo: {
         alt: "Sentiment",
-        src: "logo_long.png",
+        srcDark: "logo_long.png",
+        src: "logo_long_black.png",
       },
       items: [
         {

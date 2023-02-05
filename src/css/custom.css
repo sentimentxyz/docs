@@ -1,3 +1,22 @@
+:root {
+  --ifm-color-primary: #02166f;
+  --ifm-color-primary-dark: #021464;
+  --ifm-color-primary-darker: #02135e;
+  --ifm-color-primary-darkest: #010f4e;
+  --ifm-color-primary-light: #02187a;
+  --ifm-color-primary-lighter: #021980;
+  --ifm-color-primary-lightest: #031d90;
+}
+[data-theme="dark"] {
+  --ifm-color-primary: #002fff;
+  --ifm-color-primary-dark: #002ae6;
+  --ifm-color-primary-darker: #0028d9;
+  --ifm-color-primary-darkest: #0021b3;
+  --ifm-color-primary-light: #1a44ff;
+  --ifm-color-primary-lighter: #264eff;
+  --ifm-color-primary-lightest: #4d6dff;
+}
+
 .navbar--fixed-top {
   padding: 0px 16px !important;
   border-bottom: 1px solid var(--ifm-toc-border-color);
@@ -10,6 +29,17 @@
 
 .navbar__logo {
   height: 45px !important;
+}
+
+.navbar--fixed-top {
+  background: linear-gradient(60deg, #dee2f0, #a3b2f6);
+}
+aside {
+  background: linear-gradient(150deg, #dee2f0, #a3b2f6);
+}
+
+.docMainContainer_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocPage-styles-module {
+  background: radial-gradient(#a3b2f6, #dee2f0) !important;
 }
 
 [data-theme="dark"] .navbar--fixed-top {
