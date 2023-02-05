@@ -39,7 +39,7 @@ aside {
   background: linear-gradient(150deg, #dee2f0, #a3b2f6);
 }
 
-.docMainContainer_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocPage-styles-module {
+.docMainContainer_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocPage-styles-module, .docMainContainer_TCnq {
   background: radial-gradient(#a3b2f6, #dee2f0) !important;
 }
 
@@ -51,6 +51,6 @@ aside {
 }
 
 [data-theme="dark"]
-  .docMainContainer_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocPage-styles-module {
+  .docMainContainer_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocPage-styles-module, .docMainContainer_TCnq {
   background: radial-gradient(#02166f, #00092f) !important;
 }
