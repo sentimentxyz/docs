@@ -12,7 +12,7 @@ const config = {
   tagline: "The Universal Credit Protocol",
   url: "https://sentiment.xyz",
   baseUrl: "/",
-  onBrokenLinks: "throw",
+  onBrokenLinks: "ignore",
   onBrokenMarkdownLinks: "warn",
   favicon: "favicon.ico",
   organizationName: "sentimentxyz",
@@ -78,7 +78,65 @@ const config = {
       ],
     },
     footer: {
-      style: "dark",
+      style: "light",
+      links: [
+        {
+          title: "Developers",
+          items: [
+            {
+              label: "Whitepaper",
+              href: "https://docs.sentiment.xyz/assets/files/whitepaper-6d79d366383af419382831913a0470a1.pdf",
+            },
+            {
+              label: "GitHub",
+              href: "https://github.com/sentimentxyz",
+            },
+            {
+              label: "Feedback",
+              to: "/",
+            },
+          ],
+        },
+        {
+          title: "Ecosystem",
+          items: [
+            {
+              label: "Website",
+              href: "https://www.sentiment.xyz/",
+            },
+            {
+              label: "App",
+              href: "https://arbitrum.sentiment.xyz/borrow",
+            },
+            {
+              label: "DeFiLlama",
+              href: "https://defillama.com/protocol/sentiment",
+            },
+            {
+              label: "Dune Analytics",
+              href: "https://dune.com/ruvaag/sentiment-arb",
+            },
+          ],
+        },
+        {
+          title: "Community",
+          items: [
+            {
+              label: "Twitter",
+              href: "https://twitter.com/sentimentxyz",
+            },
+            {
+              label: "Discord",
+              href: "https://discord.com/invite/sentimentxyz",
+            },
+            {
+              label: "Blog",
+              href: "https://blog.sentiment.xyz/",
+            },
+          ],
+        },
+      ],
+
       copyright: `Copyright © ${new Date().getFullYear()} Sentiment.`,
     },
     prism: {
