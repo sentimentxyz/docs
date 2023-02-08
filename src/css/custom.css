@@ -33,29 +33,29 @@
 }
 
 .navbar--fixed-top {
-  background: linear-gradient(60deg, #dee2f0, #a3b2f6);
+  background: linear-gradient(60deg, #f4f6fb, #d8ddf5);
 }
 aside {
-  background: linear-gradient(150deg, #dee2f0, #a3b2f6);
+  background: linear-gradient(150deg, #f4f6fb, #d8ddf5);
 }
 
-.docMainContainer_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocPage-styles-module, .docMainContainer_TCnq {
-  background: radial-gradient(#a3b2f6, #dee2f0) !important;
+.docMainContainer_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocPage-styles-module,
+.docMainContainer_TCnq {
+  background: radial-gradient(#d8ddf5, #f4f6fb) !important;
 }
 
 [data-theme="dark"] .navbar--fixed-top {
-  background: linear-gradient(30deg, #00092f, #02166f);
+  background: linear-gradient(30deg, #00092f, #030c37);
 }
 [data-theme="dark"] aside {
-  background: linear-gradient(120deg, #00092f, #02166f);
+  background: linear-gradient(120deg, #00092f, #030c37);
 }
 
-[data-theme="dark"]
-  .docMainContainer_TCnq {
+[data-theme="dark"] .docMainContainer_TCnq {
   background: radial-gradient(#02166f, #00092f) !important;
 }
 
 [data-theme="dark"]
   .docMainContainer_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocPage-styles-module {
-  background: radial-gradient(#02166f, #00092f) !important;
+  background: radial-gradient(#030c37, #00092f) !important;
 }
