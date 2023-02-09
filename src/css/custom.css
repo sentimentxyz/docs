@@ -59,7 +59,9 @@ aside {
   .docMainContainer_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocPage-styles-module {
   background: radial-gradient(#000728, #000417) !important;
 }
-
+.footer {
+  background: linear-gradient(-30deg, #f4f6fb, #d8ddf5);
+}
 [data-theme="dark"] .footer {
   background: linear-gradient(-30deg, #000417, #000728);
 }
