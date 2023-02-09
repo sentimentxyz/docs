@@ -45,17 +45,21 @@ aside {
 }
 
 [data-theme="dark"] .navbar--fixed-top {
-  background: linear-gradient(30deg, #00092f, #030c37);
+  background: linear-gradient(30deg, #000417, #000728);
 }
 [data-theme="dark"] aside {
-  background: linear-gradient(120deg, #00092f, #030c37);
+  background: linear-gradient(120deg, #000417, #000728);
 }
 
 [data-theme="dark"] .docMainContainer_TCnq {
-  background: radial-gradient(#02166f, #00092f) !important;
+  background: radial-gradient(#000728, #000417) !important;
 }
 
 [data-theme="dark"]
   .docMainContainer_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocPage-styles-module {
-  background: radial-gradient(#030c37, #00092f) !important;
+  background: radial-gradient(#000728, #000417) !important;
+}
+
+[data-theme="dark"] .footer {
+  background: linear-gradient(-30deg, #000417, #000728);
 }
