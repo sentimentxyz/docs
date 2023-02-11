@@ -65,3 +65,28 @@ aside {
 [data-theme="dark"] .footer {
   background: linear-gradient(-30deg, #000417, #000728);
 }
+
+.menu__link--active {
+  font-weight: 900;
+}
+.breadcrumbs__item--active {
+  font-weight: 900;
+}
+.table-of-contents__link:hover,
+.table-of-contents__link:hover code,
+.table-of-contents__link--active,
+.table-of-contents__link--active code {
+  font-weight: 900;
+}
+[data-theme="dark"] .menu__link--active {
+  color: white !important;
+}
+[data-theme="dark"] .breadcrumbs__item--active .breadcrumbs__link {
+  color: white !important;
+}
+[data-theme="dark"] .table-of-contents__link:hover,
+.table-of-contents__link:hover code,
+.table-of-contents__link--active,
+.table-of-contents__link--active code {
+  color: white !important;
+}
