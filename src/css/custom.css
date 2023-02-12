@@ -78,7 +78,13 @@ aside {
 [data-theme="dark"] .footer {
   background: linear-gradient(-30deg, #000417, #000728);
 }
+.table-of-contents__link--active {
+  color: var(--ifm-link-color) !important;
+}
 
+[data-theme="dark"] .table-of-contents__link--active {
+  color: white !important;
+}
 .menu__link--active {
   font-weight: 900;
 }
@@ -99,7 +105,10 @@ aside {
 }
 [data-theme="dark"] .table-of-contents__link:hover,
 .table-of-contents__link:hover code,
-.table-of-contents__link--active,
 .table-of-contents__link--active code {
+  color: white !important;
+}
+
+[data-theme="dark"] .table-of-contents__link--active {
   color: white !important;
 }

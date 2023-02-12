@@ -14,7 +14,7 @@ const config = {
   baseUrl: "/",
   onBrokenLinks: "ignore",
   onBrokenMarkdownLinks: "warn",
-  favicon: "favicon.ico",
+  favicon: "favicon.png",
   organizationName: "sentimentxyz",
   projectName: "docs",
 
