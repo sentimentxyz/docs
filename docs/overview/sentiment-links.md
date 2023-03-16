@@ -6,26 +6,26 @@ description: All Relevant Links to the Sentiment Ecosystem
 
 ## Developers
 
-[Whitepaper](https://github.com)
+[Whitepaper](https://github.com/)
 
-[Github](https://github.com)
+[Github](https://github.com/sentimentxyz)
 
-[Feedback](https://github.com)
+[Audit](https://sentiment.notion.site/Sentiment-Security-Info-179a35ffc6514893845c3a58a2b670e7)
 
 ## Ecosystem
 
-[Website](https://github.com)
+[Website](https://www.sentiment.xyz/)
 
-[App](https://github.com)
+[App](https://arbitrum.sentiment.xyz/)
 
-[DeFiLlama](https://github.com)
+[DeFiLlama](https://defillama.com/protocol/sentiment)
 
-[Dune Analytics](https://github.com)
+[Dune Analytics](https://dune.com/ruvaag/sentiment-arb)
 
 ## Community
 
-[Twitter](https://github.com)
+[Twitter](https://twitter.com/sentimentxyz)
 
-[Discord](https://github.com)
+[Discord](https://discord.com/invite/sentimentxyz)
 
-[Blo](https://github.com)
+[Blog](https://blog.sentiment.xyz/)

@@ -15,6 +15,8 @@ allow composite collateral types such as aTokens (Aave interest bearing tokens) 
 (Yearn interest bearing tokens) and eventually introduce exotic collateral types such as ITM
 option tokens.
 
+![](<../images/joeygcamp%20Borrowing%20Flow-01%20(1)%20(1).jpg>)
+
 ## Typical Borrowing Flow
 
 1. Borrower opens an account and deposits collateral.
@@ -23,8 +25,8 @@ option tokens.
 
 When a borrower wants to close their position, they can either repay all borrowed assets with
 the accumulated interest. Excess assets (profits) can be withdrawn to the user’s EOA. In the
-case of liquidation, an external [Maintainer](https://github.com) will pay back the debt and buy the collateral assets at
-a discount. See the Sentiment [Whitepaper](https://github.com) for further detail on when a position breaches the risk
+case of liquidation, an external Maintainer will pay back the debt and buy the collateral assets at
+a discount. See the Sentiment [Whitepaper](https://docs.sentiment.xyz/assets/files/whitepaper-6d79d366383af419382831913a0470a) for further detail on when a position breaches the risk
 thresholds set by the protocol Risk Engine.
 
 ## Fees
@@ -33,8 +35,7 @@ When borrowing assets in the Account, users will have to pay a variable interest
 supply and demand for that given token. The current interest rate (APY) for all borrowable
 assets can be seen under the `Debt` section of the Account tab.
 
-In addition to variable interest rates, borrowers are subject to an origination fee. The origination
-fee will be set at 0.50% (50 bps) initially and will be subject to change. Origination fees are a
+In addition to variable interest rates, borrowers are subject to an origination fee. The origination fee will be set at 0.1% (10 bps) initially and will be subject to change. Origination fees are a
 revenue mechanism for the Sentiment protocol that result in better experience for borrowers
 and lenders due to following reasons:
 

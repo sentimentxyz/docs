@@ -1,7 +1,7 @@
 {
   "index_name": "prod_index",
-  "start_urls": ["https://docs.sentiment.xyz/"],
-  "sitemap_urls": ["https://docs.sentiment.xyz/sitemap.xml"],
+  "start_urls": ["https://sentementxyz-test.vercel.app/"],
+  "sitemap_urls": ["https://sentementxyz-test.vercel.app/sitemap.xml"],
   "sitemap_alternate_links": true,
   "stop_urls": ["/tests"],
   "selectors": {

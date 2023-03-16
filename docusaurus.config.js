@@ -26,7 +26,6 @@ const config = {
         docs: {
           routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/sentimentxyz/docs",
           remarkPlugins: [math],
           rehypePlugins: [katex],
         },
@@ -50,8 +49,8 @@ const config = {
   themeConfig: {
     autoCollapseSidebarCategories: true,
     algolia: {
-      apiKey: "4b42612579d6552c7052026237368745",
-      appId: "COO2IEW09E",
+      apiKey: "ba302929473f01e65a7a9db29568ad9c",
+      appId: "DXWXYS5HT9",
       indexName: "prod_index",
     },
     navbar: {

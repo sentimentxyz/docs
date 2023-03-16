@@ -46,15 +46,15 @@
 }
 
 .navbar--fixed-top {
-  background: linear-gradient(60deg, #f4f6fb, #d8ddf5);
+  background: linear-gradient(60deg, #fff, #ebecf1);
 }
 aside {
-  background: linear-gradient(150deg, #f4f6fb, #d8ddf5);
+  background: linear-gradient(150deg, #fff, #ebecf1);
 }
 
 .docMainContainer_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocPage-styles-module,
 .docMainContainer_TCnq {
-  background: radial-gradient(#d8ddf5, #f4f6fb) !important;
+  background: radial-gradient(#ebecf1, #fff) !important;
 }
 
 [data-theme="dark"] .navbar--fixed-top {
@@ -73,7 +73,7 @@ aside {
   background: radial-gradient(#000728, #000417) !important;
 }
 .footer {
-  background: linear-gradient(-30deg, #f4f6fb, #d8ddf5);
+  background: linear-gradient(-30deg, #fff, #ebecf1);
 }
 [data-theme="dark"] .footer {
   background: linear-gradient(-30deg, #000417, #000728);
@@ -111,4 +111,13 @@ aside {
 
 [data-theme="dark"] .table-of-contents__link--active {
   color: white !important;
+}
+
+[data-theme="dark"] .pagination-nav__link {
+  color: white !important;
+}
+
+.text--truncate {
+  white-space: normal !important;
+  text-overflow: none !important;
 }

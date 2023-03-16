@@ -1,0 +1,8 @@
+{
+  "label": "Core Contracts",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Account, Risk Engine, and Other Protocol Contract Specifications"
+  }
+}

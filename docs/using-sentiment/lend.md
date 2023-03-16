@@ -11,3 +11,5 @@ the protocol with the expectation to earn yields higher than those in current cr
 Lenders interact with the protocol by supplying assets and receiving corresponding
 interest-bearing [LTokens](https://github.com) in return. These [LTokens](https://github.com) act as a receipt of deposit and can be burned
 at a later point in time to redeem the initial principal and accrued interest.
+
+![](../images/Final%20Lending.jpg)
