@@ -1,0 +1,8 @@
+{
+  "label": "Controller",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Implementation of the Protocol Controller Contracts"
+  }
+}
