@@ -6,7 +6,7 @@ description: All Relevant Links to the Sentiment Ecosystem
 
 ## Developers
 
-[Whitepaper](https://github.com/)
+[Whitepaper](../../static/whitepaper.pdf)
 
 [Github](https://github.com/sentimentxyz)
 
