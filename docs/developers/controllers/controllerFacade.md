@@ -7,7 +7,7 @@ description: The common entry point for calls to any Controller
 ## Overview
 
 The controller facade acts as the common entry point for calls to any controller
-and allows easy configuration and maintainability of multiple controllers. Controllers enable [accounts](protocol/core/account.md) to interact with external protocols and smart contracts.
+and allows easy configuration and maintainability of multiple controllers. Controllers enable [accounts](../core/account.md) to interact with external protocols and smart contracts.
 
 ## Contract Spec
 
@@ -40,4 +40,4 @@ function canCall(
     ) external view returns (bool, address[] memory, address[] memory) { }
 ```
 
-- has similar functionality to `canCall` but can batch many calls within one. This enhances UX from an account user perspective if they wish to perform a strategy or create a position that requires many different contract interactions, see [potential use cases](misc/useCases.md).
+- has similar functionality to `canCall` but can batch many calls within one. This enhances UX from an account user perspective if they wish to perform a strategy or create a position that requires many different contract interactions.

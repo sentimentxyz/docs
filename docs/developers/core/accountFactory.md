@@ -22,4 +22,4 @@ function create(address accountManager)
     { }
 ```
 
-- This function mints (creates) a new account. This is used if the account queue is empty, meaning all previously minted accounts are currently in use. This function is only used by the [account manager](protocol/core/accountManager.md)
+- This function mints (creates) a new account. This is used if the account queue is empty, meaning all previously minted accounts are currently in use. This function is only used by the [account manager](accountManager.md)

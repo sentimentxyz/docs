@@ -14,10 +14,10 @@ respective LToken contracts to isolate risk. Each LToken is implemented using th
 
 ## Contract Spec
 
+### State Variables
 
-### State Variables  
 - `IRegistry public registry` storage of registry
-- `IRateModel public rateModel` storage of [Interest Rate rateModel](protocol/core/rateModel.md)
+- `IRateModel public rateModel` storage of [Interest Rate rateModel](../core/rateModel.md)
 - `address public accountManager` account Manager
 - `uint public reserves` total amount of deposited asset reserves
 - `uint public borrows` total amount of borrows
@@ -26,6 +26,7 @@ respective LToken contracts to isolate risk. Each LToken is implemented using th
 - `mapping (address => uint) public borrowsOf` Mapping of an account to the amount of borrows it has
 
 ### Functions
+
 **Account Actions**
 These actions are specified by accounts but conducted by the Account Manager
 contract
@@ -38,7 +39,8 @@ function lendTo(address account, uint amt)
     returns (bool isFirstBorrow)
     { }
 ```
-- Lends a specified amount of underlying asset to an account, `isFirstBorrow`     returns if the account is borrowing the asset for the first time. Everytime function is called the state of the Ltoken pool gets updated
+
+- Lends a specified amount of underlying asset to an account, `isFirstBorrow` returns if the account is borrowing the asset for the first time. Everytime function is called the state of the Ltoken pool gets updated
 
 ```sol
 function collectFrom(address account, uint amt)
@@ -47,34 +49,43 @@ function collectFrom(address account, uint amt)
   returns (bool)
 { }
 ```
+
 - Collects a specified amount of underlying asset from an account. `isNotInDebt` returns if the account has pending borrows or not
 
 ```sol
    function getBorrowBalance(address account) external view returns (uint) { }
 ```
+
 - fetches the debt balance of a given account, returns the amount of the underlying tokens borrowed
 
 **Public Functions**
+
 ```sol
     function totalAssets() public view override returns (uint) { }
 ```
+
 - Returns total amount of underlying assets
-            totalAssets = underlying balance + totalBorrows - totalReservers + delta
-            delta = totalBorrows * RateFactor * (1e18 - reserveFactor)
+  totalAssets = underlying balance + totalBorrows - totalReservers + delta
+  delta = totalBorrows _ RateFactor _ (1e18 - reserveFactor)
 
 ```sol
 function updateState() public { }
 ```
+
 - updates the state of the Ltoken contract, callable by anyone, to ensure data freshness
 
 **Helper Functions**
+
 ```sol
 function _getRateFactor() internal view returns (uint) { }
 ```
-- Rate Factor = Block Delta * Interest Rate Per Block
-    Block Delta = Number of blocks since last update
-**Admin Functions**
+
+- Rate Factor = Block Delta \* Interest Rate Per Block
+  Block Delta = Number of blocks since last update
+  **Admin Functions**
+
 ```sol
 function redeemReserves(address to, uint amt) external adminOnly { }
 ```
-- Transfers reserves from the LP to the specified address, this will be used sparsely, when assets accrued via the reserve factor are necessary for utilization. This could be used for a liquidity backstop or fee disbursement.  
+
+- Transfers reserves from the LP to the specified address, this will be used sparsely, when assets accrued via the reserve factor are necessary for utilization. This could be used for a liquidity backstop or fee disbursement.
