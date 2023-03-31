@@ -10,15 +10,15 @@ The `AccountManager.sol` contract will be responsible for 3 main things:
 
 1. Minting and Initializing Accounts for Users (Borrowers)
 2. Managing the state of Accounts with reference to: Availability of Accounts, initiating withdrawals and transfers between the User, Account and Lending Pool
-3. Managing and updating data that Margin need to operate including; [Controller](protocol/controllers/controller.md) addresses and [Risk Engine](protocol/core/riskEngine.md) address.
+3. Managing and updating data that Margin need to operate including; [Controller](../controllers/controller.md) addresses and [Risk Engine](riskEngine.md) address.
 
 ## Contract Spec
 
 ### Storage
 
-- `IRiskEngine public riskEngine` [Risk Engine](protocol/core/riskEngine.md) interface state variable. Stores the Risk engine contract
-- `IControllerFacade public controller` [Controller](protocol/controllers/controller.md) interface state variable.
-- `IAccountFactory public accountFactory` [Account Factory](protocol/core/accountFactory.md)
+- `IRiskEngine public riskEngine` [Risk Engine](riskEngine.md) interface state variable. Stores the Risk engine contract
+- `IControllerFacade public controller` [Controller](../controllers/controller.md) interface state variable.
+- `IAccountFactory public accountFactory` [Account Factory](accountFactory.md)
 - `inactiveAccounts` an array of previously minted accounts that are eligible to be initialized for borrowers
 - `isCollateralAllowed` a mapping of address to a boolean, affirming if a token address is able to be used as collateral
 
@@ -52,7 +52,7 @@ Account owners or operators do not control Accounts directly, rather the Account
 
 ### Interacting with Controllers
 
-Accounts interact with contracts external to the core Sentiment architecture via [controllers](protocol/controllers/controller.md).
+Accounts interact with contracts external to the core Sentiment architecture via [controllers](../controllers/controller.md).
 
 ```solidity
 function exec(

@@ -9,7 +9,7 @@ which holds a user’s collateral and loaned assets.
 
 ## Overview
 
-The `Account.sol` contract is deployed by the borrower and owned by the Protocol. Accounts hold the assets (collateral) of a borrower and data about their debt to the protocol. The borrower has delegated ownership of the account, and can only interact with it via the [Account Manager](protocol/core/accountManager.md). All interactions,
+The `Account.sol` contract is deployed by the borrower and owned by the Protocol. Accounts hold the assets (collateral) of a borrower and data about their debt to the protocol. The borrower has delegated ownership of the account, and can only interact with it via the [Account Manager](accountManager.md). All interactions,
 while delegated, are actually performed directly through the account contract.
 
 Each account is created by a common `Account Factory` contract and is an instance
@@ -24,8 +24,8 @@ collateral.
 ### State Variables
 
 - `activationBlock` lock number for when the account is activated. Note: This is important since accounts are reusable. Each time a contract is initialized to a
-new borrower, it will be timestamped with the corresponding block.
-- `accountManager` current implementation of the [account manager](protocol/core/accountManager.md)
+  new borrower, it will be timestamped with the corresponding block.
+- `accountManager` current implementation of the [account manager](accountManager.md)
 - `assets` list of ERC-20 assets (Collaterals + Borrows) present in the account
 - `borrows` list of borrowed ERC-20 assets present in the account
 
@@ -43,9 +43,9 @@ new borrower, it will be timestamped with the corresponding block.
 ```
 
 - Initializes the account by setting the address of the account
-manager.
+  manager.
 - Can only be called as long as the address of the accountManager is
-0x0.
+  0x0.
 
 ```sol
     function activate() external accountManagerOnly { }
@@ -53,13 +53,13 @@ manager.
 ```
 
 - Activates an account by setting the activationBlock to the
-current block number
+  current block number
 
 ### View functions
 
 - `function getAssets()` returns `tokens` in asset array
 - `function getBorrows()` returns tokens that have been borrowed within the
-accounts
+  accounts
 
 ### Utility Functions
 
@@ -74,8 +74,8 @@ function exec(address target, uint amt, bytes calldata data)
 ```
 
 - Generalized utility function to transact with a given contract
-target Address of contract to transact with. This gives modularity to
-each Account within the Sentiment ecosystem. This function allows arbitrary execution of functions that allow users to interact with other protocols such as AMMs and structured products in a modular way. This function is delegated through the [account manager](protocol/core/accountManager.md) and referenced with the [controllers](protocol/controllers/controller.md) to ensure functions are permissible.
+  target Address of contract to transact with. This gives modularity to
+  each Account within the Sentiment ecosystem. This function allows arbitrary execution of functions that allow users to interact with other protocols such as AMMs and structured products in a modular way. This function is delegated through the [account manager](accountManager.md) and referenced with the [controllers](../controllers/controller.md) to ensure functions are permissible.
 
 ```sol
  function sweepTo(address toAddress) external accountManagerOnly { }
@@ -83,8 +83,8 @@ each Account within the Sentiment ecosystem. This function allows arbitrary exec
 ```
 
 - Utility function to transfer all assets to a specified account
-and delete all assets. This will *normally* be used during liquidations, but
-provides flexibility to be used for global settlement of Accounts
+  and delete all assets. This will _normally_ be used during liquidations, but
+  provides flexibility to be used for global settlement of Accounts
 
 ### Asset Management
 
